@@ -1,0 +1,38 @@
+.create-contact {
+    display: flex;
+    flex-direction: column;
+    /*overflow: hidden;*/
+    padding: 20px 20px;
+    background-color: rgb(206, 211, 209);
+    .title {
+      margin: 10px 0;
+    }
+  
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  form {
+    width: 100%;
+    margin: 30 auto;
+}
+
+label, input {
+    display: inline-block;
+}
+
+label {
+    width: 30%;
+    text-align: right;
+}
+
+label + input {
+    width: 30%;
+    margin: 0 30% 0 4%;
+}
+
+input + input {
+    float: right;
+}
