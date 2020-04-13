@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './create-contact.style.scss';
 
 import FormInput from '../form-input/form-input.component';
@@ -11,12 +11,8 @@ export const CreateContact = (props) => {
 
   let button_label = '';
   let tytle = '';
-  
-  // let old_name = '';
-  // let old_last_name = '';
-  // let old_email = '';
-  // let old_telephone = '';
-  // let old_image_url = '';
+
+
 
   const [name, setName] = useState("");
   const [last_name, setLastName] = useState("");
@@ -31,24 +27,23 @@ export const CreateContact = (props) => {
   } else {
     button_label = "Edit Contact";
     tytle = "Edit Data";
-    
-    let old_name = props.contactDetails.name;
-    let old_last_name = props.contactDetails.last_name;
-    let old_email = props.contactDetails.email;
-    let old_telephone = props.contactDetails.telephone;
-    let old_image_url = props.contactDetails.image_url; 
 
-    // setName(old_name);
-    // setLastName(old_last_name);
-    // setEmail(old_email);
-    // setTelephone(old_telephone);
-    // setImageUrl(old_image_url);
-  
   }
+
+  useEffect(() => {
+    
+    setName(props.contactDetails === undefined ? "" : props.contactDetails.name);
+    setLastName(props.contactDetails === undefined ? "" : props.contactDetails.last_name);
+    setEmail(props.contactDetails === undefined ? "" : props.contactDetails.email);
+    setTelephone(props.contactDetails === undefined ? "" : props.contactDetails.telephone);
+    setImageUrl(props.contactDetails === undefined ? "" : props.contactDetails.image_url);
+  }, []);
+
+
 
   const id = props.contactDetails === undefined ? "" : props.contactDetails.id;
 
-  
+
   const handleSubmit = async event => {
     event.preventDefault();
     console.log('submit form');
