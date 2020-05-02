@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactList component it should render List of Contacts 1`] = `ShallowWrapper {}`;
+
+exports[`it should render List of Contacts 1`] = `ShallowWrapper {}`;
