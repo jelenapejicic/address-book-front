@@ -11,7 +11,7 @@ export const Contact = (props) => {
 
     const handleRemoveItem = (e) => {
 
-        console.log(props.contact.id);
+        //console.log(props.contact.id);
 
         if(window.confirm('Delete the contact?'))
         {
@@ -34,6 +34,7 @@ export const Contact = (props) => {
             <Modal className="edit-button" iconClass="fa fa-edit" contactDetails={props.contact}></Modal>
             
             <DeleteButton onClick={handleRemoveItem} ></DeleteButton>
+            
             <img alt="customer" src={image_url} className="customer-image" />
             <p><span> {props.contact.name} </span>
             <span> {props.contact.last_name} </span></p>
