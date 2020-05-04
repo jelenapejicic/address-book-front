@@ -3,7 +3,7 @@ import './create-contact.style.scss';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
-
+import { fetchFunc } from "../../Api";
 
 export const CreateContact = (props) => {
 
@@ -54,11 +54,9 @@ export const CreateContact = (props) => {
     };
 
     if (id === '') {
-      fetch('http://localhost:8080/imenik/api/contact/create.php', requestOptions)
-        .then(props.handleState);
+      fetchFunc('create.php', requestOptions).then(props.handleState);
     } else {
-      fetch('http://localhost:8080/imenik/api/contact/update.php', requestOptions)
-        .then(props.handleState);
+      fetchFunc('update.php', requestOptions).then(props.handleState);
     }
 
   };
