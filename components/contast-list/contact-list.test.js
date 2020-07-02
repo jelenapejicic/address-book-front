@@ -44,7 +44,7 @@ describe('ContactList component', () => {
 
     it('should render an equal number of Contact components as the ContactList prop', () => {
         
-        console.log(wrapper.debug());
+        //console.log(wrapper.debug());
         const children = wrapper.find(Contact);
         expect (children).toHaveLength(2);
 
