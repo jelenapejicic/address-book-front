@@ -1,51 +1,33 @@
 node {
-
-    stage('Clone repository') {
-        checkout scm
+  try {
+    stage('Checkout') {
+      checkout scm
     }
-
-    stage('Build image') {	 
-
-        // Install the dependencies
-        sh 'npm install'
-
-        // Build the project
-        sh 'npm run build'
-
-        // Build the docker image with the tag "sample-app"
-        sh 'docker build -t sample-app .'
-
-        // Export the docker image as sample-app.tar file
-        sh 'docker save -o sample-app.tar sample-app:latest'	    
+    stage('Environment') {
+      sh 'git --version'
+      echo "Branch: ${env.BRANCH_NAME}"
+      sh 'docker -v'
+      sh 'printenv'
     }
-
-    stage('Push image') {
-	    
-        // Push the image
-        sh 'scp -o StrictHostKeyChecking=No sample-app.tar root@127.0.0.1:/root'
-        
-        // Stop the running container
-        sh 'ssh -o StrictHostKeyChecking=No root@127.0.0.1 docker stop sample-container'
-            
-        // Remove the running container   
-        sh 'ssh -o StrictHostKeyChecking=No root@127.0.0.1 docker rm sample-container'
-        
-        // Remove the current image 
-        sh 'ssh -o StrictHostKeyChecking=No root@127.0.0.1 docker rmi sample-app'
-            
-        // Load the new image
-        sh 'ssh -o StrictHostKeyChecking=No root@127.0.0.1 docker load -i sample-app.tar'
-            
-        // Run the container
-        sh 'ssh -o StrictHostKeyChecking=No root@127.0.0.1 docker run -d --name sample-container -p 80:80 --restart=always sample-app'    
+    stage('Build Docker test'){
+     sh 'docker build -t react-test -f Dockerfile.test --no-cache .'
     }
-
-    stage('Remove image from Jenkins') {
-
-        // Remove the exported file
-        sh 'rm sample-app.tar'
-
-        // Remove the docker image from Jenkins server 
-        sh 'docker rmi sample-app'  
+    stage('Docker test'){
+      sh 'docker run --rm react-test'
     }
+    stage('Clean Docker test'){
+      sh 'docker rmi react-test'
+    }
+    stage('Deploy'){
+      if(env.BRANCH_NAME == 'master'){
+        sh 'docker build -t react-app --no-cache .'
+        sh 'docker tag react-app localhost:5000/react-app'
+        sh 'docker push localhost:5000/react-app'
+        sh 'docker rmi -f react-app localhost:5000/react-app'
+      }
+    }
+  }
+  catch (err) {
+    throw err
+  }
 }
