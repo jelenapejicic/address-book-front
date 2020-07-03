@@ -13,10 +13,10 @@ node {
      bat  'docker build -t react-test -f Dockerfile.test --no-cache .'
     }
     stage('Docker test'){
-      bat  'docker run --rm react-test'
+      //bat  'docker run --rm react-test'
     }
     stage('Clean Docker test'){
-      bat  'docker rmi react-test'
+     // bat  'docker rmi react-test'
     }
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
