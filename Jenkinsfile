@@ -9,12 +9,12 @@ node {
         userRemoteConfigs: [[url: 'https://github.com/jelenapejicic/address-book-front.git']]
     ])
     }
-    stage('Environment') {
-      sh 'git --version'
-      echo "Branch: ${env.BRANCH_NAME}"
-      sh 'docker -v'
-      sh 'printenv'
-    }
+    // stage('Environment') {
+    //   sh 'git --version'
+    //   echo "Branch: ${env.BRANCH_NAME}"
+    //   sh 'docker -v'
+    //   sh 'printenv'
+    // }
     // stage('Build Docker test'){
     //  sh 'docker build -t react-test -f Dockerfile.test --no-cache .'
     // }
