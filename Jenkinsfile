@@ -7,9 +7,7 @@ node {
         extensions: [[$class: 'CloneOption', timeout: 120]],
         gitTool: 'Default', 
         userRemoteConfigs: [[url: 'https://github.com/jelenapejicic/address-book-front.git']]
-    ]
-    echo "ola jelenaaaaa"
-    )
+    ])
     }
     // stage('Environment') {
     //   sh 'git --version'
