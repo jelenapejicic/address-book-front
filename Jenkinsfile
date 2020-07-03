@@ -7,7 +7,7 @@ node {
       bat  'git --version'
       echo "Branch: ${env.BRANCH_NAME}"
       bat  'docker -v'
-      bat  'printenv'
+      //bat  'printenv'
     }
     stage('Build Docker test'){
      bat  'docker build -t react-test -f Dockerfile.test --no-cache .'
