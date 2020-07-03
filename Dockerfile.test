@@ -1,17 +1,13 @@
-# Use an official node runtime as a parent image
-FROM node:10
+FROM node
 
-# Set the working directory to /home/app
-WORKDIR . 
+RUN mkdir /usr/src/app
 
-# Bundle app source
-# COPY . /home/app/
+COPY . /usr/src/app
 
-# If you are building your code for production
-# RUN npm install --only=production
-RUN npm install
+WORKDIR /usr/src/app
 
-# Make port 8000 available to the world outside this container
-EXPOSE 8000
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
-CMD npm run dev
+RUN yarn
+
+CMD ["npm", "start"]
