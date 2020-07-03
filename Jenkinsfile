@@ -10,7 +10,7 @@ node {
       //bat  'printenv'
     }
     stage('Build Docker test'){
-     bat  'docker build -t react-test -f Dockerfile --no-cache .'
+     bat  'docker build -t react-test -f Dockerfile.test --no-cache .'
     }
     stage('Docker test'){
       //bat  'docker run --rm react-test'

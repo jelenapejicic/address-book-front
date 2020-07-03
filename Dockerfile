@@ -1,4 +1,4 @@
-F# Extending image
+# Extending image
 FROM node:carbon
 
 RUN apt-get update
