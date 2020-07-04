@@ -19,8 +19,8 @@ RUN node -v
 COPY package.json /usr/src/app/
 COPY package-lock.json /usr/src/app/
 
-# RUN npm install
-
+RUN npm install
+RUN npm run eslint -f cccc.txt
 # Bundle app source
 COPY . /usr/src/app
 
