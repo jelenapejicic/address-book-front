@@ -12,7 +12,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const Modal = (props) => (
-    dfvf/*-/*-
+    
     <Popup className="modalll"
       trigger={<button className={props.className}> <span className={props.iconClass}></span> </button>}
       modal
@@ -46,7 +46,7 @@ const App = () => {
   
   return (
     <div >
-      <h1>Address Book</h1>
+      <h1>Addresponses Book</h1>
       <div className="contact-box">
         <SearchBox
           placeholder="Search names..."

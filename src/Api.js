@@ -19,7 +19,7 @@ export const fetchFunc = async (urlParam, requestOptions) => {
                 console.log(data);
                 return data;
             });
-
+        console.log(response);
 
     }
 
