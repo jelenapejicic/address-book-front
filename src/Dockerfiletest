@@ -11,6 +11,7 @@ WORKDIR /usr/src/app
 
 # Versions
 RUN npm -v
+RUN ls
 RUN node -v
 
 # Install app dependencies
