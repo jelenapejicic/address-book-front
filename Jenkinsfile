@@ -5,7 +5,7 @@ node {
     }
     stage('Environment') {
       bat  'git --version'
-      bat 'npm install'
+      //bat 'npm install'
       bat 'npm run build'
 
       echo "Branch: ${env.BRANCH_NAME}"
