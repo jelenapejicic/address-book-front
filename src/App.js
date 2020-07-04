@@ -12,6 +12,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const Modal = (props) => (
+    dfvf/*-/*-
     <Popup className="modalll"
       trigger={<button className={props.className}> <span className={props.iconClass}></span> </button>}
       modal
