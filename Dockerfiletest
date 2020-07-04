@@ -11,7 +11,7 @@ WORKDIR /usr/src/app
 
 # Versions
 RUN npm -v
-RUN ls
+RUN echo dockerfiletest
 RUN node -v
 
 # Install app dependencies
