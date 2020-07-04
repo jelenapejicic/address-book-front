@@ -5,7 +5,8 @@ node {
     }
     stage('Environment') {
       bat  'git --version'
-      bat 'dir'
+      bat 'npm run build'
+
       echo "Branch: ${env.BRANCH_NAME}"
       bat  'docker -v'
       //bat  'printenv'
