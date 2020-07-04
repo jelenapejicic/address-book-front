@@ -6,7 +6,7 @@ node {
     stage('Environment') {
       bat  'git --version'
       bat 'docker container ls'
-      bat 'docker cp react-test:/usr/src/app \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master\"'
+      bat 'docker cp 7a461c42b6e7:/usr/src/app \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master\"'
       //bat 'npm install'
       bat 'npm run build'
 
