@@ -5,7 +5,7 @@ node {
     }
     stage('Environment') {
       bat  'git --version'
-      bat 'docker ps'
+      bat 'docker cp react-test:/usr/src/app C:\Program Files (x86)\Jenkins\workspace\Job_Jelena_master '
       //bat 'npm install'
       bat 'npm run build'
 
