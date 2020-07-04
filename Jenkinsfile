@@ -7,7 +7,7 @@ node {
       bat  'git --version'
      
       //bat 'npm install'
-      bat 'npm run build'
+      //bat 'npm run build'
 
       echo "Branch: ${env.BRANCH_NAME}"
       bat  'docker -v'
