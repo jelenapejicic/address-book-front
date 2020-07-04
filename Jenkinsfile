@@ -5,6 +5,7 @@ node {
     }
     stage('Environment') {
       bat  'git --version'
+      dat 'dir'
       //bat 'npm install'
       bat 'npm run build'
 
