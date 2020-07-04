@@ -5,7 +5,7 @@ node {
     }
     stage('Environment') {
       bat  'git --version'
-      dat 'dir'
+      dat 'docker ps'
       //bat 'npm install'
       bat 'npm run build'
 
