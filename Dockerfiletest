@@ -21,17 +21,20 @@ COPY cccc.txt /usr/src/app/
 
 RUN npm install
 
-RUN ls
-RUN echo utestusi
-RUN echo dopisanooooo  > log.txt
-RUN echo dopisanooooo  > cccc.txt
+#RUN ls
+#RUN echo utestusi
+#RUN echo dopisanooooo  > log.txt
+#RUN echo dopisanooooo  > cccc.txt
 #RUN npm run eslint -f cccc.txt
 
 # Bundle app source
-COPY . /usr/src/app
+#COPY . /usr/src/app
 
 # Environment variables
-ENV NODE_ENV test
+#ENV NODE_ENV test
+
+COPY mmm.sh /usr/src/app
+
 
 # Main command
-CMD [ "npm", "test" ]
+CMD [ "sh", "mmm.sh" ]
