@@ -28,7 +28,7 @@ RUN echo dopisanooooo  > cccc.txt
 #RUN npm run eslint -f cccc.txt
 
 # Bundle app source
-COPY . /usr/src/app
+#COPY . /usr/src/app
 
 # Environment variables
 ENV NODE_ENV test
