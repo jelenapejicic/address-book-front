@@ -20,6 +20,7 @@ COPY package.json /usr/src/app/
 COPY package-lock.json /usr/src/app/
 
 RUN npm install
+RUN echo tessssssst  > cccc.txt
 RUN npm run eslint -f cccc.txt
 # Bundle app source
 COPY . /usr/src/app
