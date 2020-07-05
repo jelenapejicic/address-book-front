@@ -23,7 +23,7 @@ RUN npm install
 RUN ls
 RUN echo utestusi
 RUN echo tessssssst  > cccc.txt
-RUN npm run eslint -f cccc.txt
+#RUN npm run eslint -f cccc.txt
 
 # Bundle app source
 COPY . /usr/src/app
