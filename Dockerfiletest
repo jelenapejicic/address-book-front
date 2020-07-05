@@ -37,4 +37,4 @@ COPY mmm.sh /usr/src/app
 
 
 # Main command
-CMD [ "sh", "mmm.sh" ]
+CMD [ "sh", "lll.sh" ]
