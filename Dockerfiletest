@@ -33,7 +33,7 @@ RUN npm install
 # Environment variables
 #ENV NODE_ENV test
 
-COPY mmm.sh /usr/src/app
+COPY lll.sh /usr/src/app
 
 
 # Main command
