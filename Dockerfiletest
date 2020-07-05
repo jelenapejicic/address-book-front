@@ -23,6 +23,7 @@ RUN npm install
 RUN ls
 RUN echo utestusi
 RUN echo dopisanooooo  > log.txt
+RUN echo dopisanooooo  > cccc.txt
 #RUN npm run eslint -f cccc.txt
 
 # Bundle app source
