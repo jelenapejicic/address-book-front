@@ -37,4 +37,4 @@ COPY lll.sh /usr/src/app
 
 
 # Main command
-CMD [ "sh", "lll.sh" ]
+#CMD [ "sh", "lll.sh" ]
