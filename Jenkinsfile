@@ -7,22 +7,20 @@ node {
       bat  'git --version'
      
       //bat 'npm install'
-      //bat 'npm run build'
+      //bat 'npm run eslint'
 
       echo "Branch: ${env.BRANCH_NAME}"
       bat  'docker -v'
       //bat  'printenv'
     }
     stage('Build Docker test'){
-
-      bat 'docker run --name react-test --rm -v \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master":/usr/src/app react-test'
-      bat  'docker build -t react-test -f Dockerfiletest --no-cache .'
+     bat  'docker build -t react-test -f Dockerfiletest --no-cache .'
     }
     stage('Docker test'){
       // bat 'docker ps'
       // bat 'docker cp 7a461c42b6e7:/usr/src/app \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master\"'
       
-      //bat 'docker run --name react-test --rm -v \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master":/usr/src/app react-test'
+      bat 'docker run --name react-test --rm -v \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master":/usr/src/app react-test'
       bat 'more cccc.txt'
     }
     stage('Clean Docker test'){
