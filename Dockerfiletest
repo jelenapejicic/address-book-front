@@ -35,6 +35,6 @@ RUN npm install
 
 COPY lll.sh /usr/src/app
 
-
+RUN dos2unix lll.sh; chmod 755 lll.sh
 # Main command
 #CMD [ "sh", "lll.sh" ]
