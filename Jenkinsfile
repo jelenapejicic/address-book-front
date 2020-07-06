@@ -20,10 +20,10 @@ node {
       // bat 'docker ps'
       // bat 'docker cp 7a461c42b6e7:/usr/src/app \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master\"'
       
-      bat 'docker run --name react-test --rm -v \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master":/usr/src/app react-test'
+      // bat 'docker run --name react-test --rm -v \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master":/usr/src/app react-test'
+      bat 'docker run --name react-test --rm -v \"C:\\test":/usr/src/app react-test'
       
       
-      bat 'more cccc.txt'
     }
     stage('Clean Docker test'){
        

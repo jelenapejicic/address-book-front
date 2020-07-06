@@ -19,11 +19,11 @@ RUN node -v
 COPY package.json /usr/src/app/
 COPY package-lock.json /usr/src/app/
 
-RUN npm install
+#RUN npm install
 RUN ls
-RUN echo ovdeeeeeeesiiiiii
-RUN echo tessssssst  > cccc.txt
-RUN npm run eslint -f cccc.txt
+RUN echo "pokrenut je docker file"
+# RUN echo tessssssst  > cccc.txt
+# RUN npm run eslint -f cccc.txt
 
 # Bundle app source
 COPY . /usr/src/app
