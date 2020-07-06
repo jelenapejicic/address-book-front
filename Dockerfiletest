@@ -17,7 +17,6 @@ RUN node -v
 # Install app dependencies
 COPY package.json /usr/src/app/
 COPY package-lock.json /usr/src/app/
-COPY cccc.txt /usr/src/app/
 COPY lll.sh /usr/src/app
 
 RUN dos2unix lll.sh; chmod 755 lll.sh
