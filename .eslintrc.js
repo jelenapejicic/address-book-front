@@ -4,7 +4,6 @@ module.exports = {
         "es2020": true
     },
     "extends": "plugin:react/recommended",
-    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -14,7 +13,6 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
     ],
     "rules": {
     }
