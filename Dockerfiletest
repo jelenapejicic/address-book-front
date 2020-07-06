@@ -21,10 +21,10 @@ COPY .eslintrc.js /usr/src/app/
 #COPY lll.sh /usr/src/app
 RUN npm install
 #RUN npm install eslint -g
-#RUN node_modules/.bin/eslint -c .eslintrc.js -f checkstyle . --ext .js,.jsx > /usr/src/test/eslint.xml
+#RUN node_modules/.bin/eslint -c .eslintrc.js -f checkstyle . --ext .js,.jsx -o eslint.xml
 
 #RUN dos2unix lll.sh; chmod 755 lll.sh
 
 #CMD [ "sh", "lll.sh" ]
 CMD echo aaaaaaaaaaa > xxxx.txt
-CMD cp eslint.txt /usr/src/test
+CMD cp eslint.xml /usr/src/test
