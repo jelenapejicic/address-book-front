@@ -27,15 +27,4 @@ COPY cccc.txt /usr/src/app/
 #RUN echo dopisanooooo  > cccc.txt
 #RUN npm run eslint -f cccc.txt
 
-# Bundle app source
-#COPY . /usr/src/app
-
-# Environment variables
-#ENV NODE_ENV test
-
-COPY lll.sh /usr/src/app
-
-#RUN dos2unix lll.sh; chmod 755 lll.sh
-# Main command
-# uhhhhh
 CMD [ "sh", "lll.sh" ]
