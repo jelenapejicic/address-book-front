@@ -22,7 +22,7 @@ node {
       // bat 'docker run --name react-test --rm -v \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master":/usr/src/app react-test'
       bat 'docker run --name react-test --rm -v \"C:\\test":/usr/src/app react-test'
       
-      bat 'C:\\test\\more sss.txt'
+      bat 'more "C:\\test\\sss.txt"'
     }
     stage('Clean Docker test'){
        
