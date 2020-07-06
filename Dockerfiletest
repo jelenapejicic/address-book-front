@@ -27,4 +27,4 @@ COPY .eslintrc.js /usr/src/app/
 
 #CMD [ "sh", "lll.sh" ]
 CMD echo aaaaaaaaaaa > xxxx.txt
-CMD xxxx.txt /usr/src/test
+CMD cp xxxx.txt /usr/src/test
