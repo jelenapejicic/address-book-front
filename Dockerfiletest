@@ -23,4 +23,4 @@ COPY lll.sh /usr/src/app
 
 #CMD [ "sh", "lll.sh" ]
 CMD echo aaaaaaaaaaa > xxxx.txt
-CMD COPY lll.sh /usr/src/app
+CMD cp lll.sh /usr/src/test
