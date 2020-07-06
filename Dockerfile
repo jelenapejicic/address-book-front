@@ -1,42 +1,31 @@
-# # Extending image
-# FROM node:carbon
+# Extending image
+FROM node:carbon
 
-# RUN apt-get update
-# RUN apt-get upgrade -y
-# RUN apt-get -y install autoconf automake libtool nasm make pkg-config git apt-utils
+#RUN apt-get update
+#RUN apt-get upgrade -y
+#RUN apt-get -y install autoconf automake libtool nasm make pkg-config git apt-utils
 
-# # Create app directory
-# RUN mkdir -p /usr/src/app
-# WORKDIR /usr/src/app
+# Create app directory
+RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/test
+WORKDIR /usr/src/app
 
-# # Versions
-# RUN npm -v
-# RUN npm -v
-# RUN echo dockerfile
-# RUN node -v
+# Versions
+RUN npm -v
+RUN echo dockerfiletest
+RUN node -v
 
-# # Install app dependencies
-# COPY package.json /usr/src/app/
-# COPY package-lock.json /usr/src/app/
+# Install app dependencies
+COPY package.json /usr/src/app/
+COPY package-lock.json /usr/src/app/
+COPY .eslintrc.js /usr/src/app/
+#COPY lll.sh /usr/src/app
+#RUN npm install
+#RUN npm install eslint@6.6.0 -g
+#CMD eslint -c .eslintrc.js -f checkstyle . --ext .js,.jsx -o /usr/src/test/eslint.xml
 
-# #RUN npm install
-# RUN ls
-# RUN echo "pokrenut je docker file"
-# # RUN echo tessssssst  > cccc.txt
-# # RUN npm run eslint -f cccc.txt
+#RUN dos2unix lll.sh; chmod 755 lll.sh
 
-# # Bundle app source
-# COPY . /usr/src/app
-
-# # Port to listener
-# EXPOSE 3000
-
-# # Environment variables
-# ENV NODE_ENV production
-# ENV PORT 3000
-# ENV PUBLIC_PATH "/"
-
-# # RUN npm run start:build
-
-# # Main command
-# #CMD [ "npm", "run", "start" ]
+#CMD [ "sh", "lll.sh" ]
+CMD echo aaaaaaaaaaa > /usr/src/test/marica.txt
+#CMD cp xxxx.txt /usr/src/test
