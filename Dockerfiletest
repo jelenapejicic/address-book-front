@@ -18,13 +18,8 @@ RUN node -v
 COPY package.json /usr/src/app/
 COPY package-lock.json /usr/src/app/
 COPY cccc.txt /usr/src/app/
+COPY lll.sh /usr/src/app
 
-#RUN npm install
-
-#RUN ls
-#RUN echo utestusi
-#RUN echo dopisanooooo  > log.txt
-#RUN echo dopisanooooo  > cccc.txt
-#RUN npm run eslint -f cccc.txt
+RUN dos2unix lll.sh; chmod 755 lll.sh
 
 CMD [ "sh", "lll.sh" ]
