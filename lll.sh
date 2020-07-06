@@ -1,6 +1,3 @@
 #!/bin/bash
-echo "upisi neki tekst u fajl" > sss.txt
-COPY package.json /usr/src/app/
-COPY package-lock.json /usr/src/app/
-COPY lll.sh /usr/src/app
+echo "upisi neki tekst u fajl aaa" > sss.txt
 #npm run eslint -f cccc.txt
