@@ -37,4 +37,5 @@ COPY lll.sh /usr/src/app
 
 RUN dos2unix lll.sh; chmod 755 lll.sh
 # Main command
+# uhhhhh
 #CMD [ "sh", "lll.sh" ]
