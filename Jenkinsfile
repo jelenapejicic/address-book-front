@@ -11,7 +11,7 @@ node {
 
       echo "Branch: ${env.BRANCH_NAME}"
       bat  'docker -v'
-      //bat  'printenv'
+      
     }
     stage('Build Docker test'){
      bat  'docker build -t react-test --no-cache .'
@@ -25,8 +25,7 @@ node {
       // bat 'more "C:\\test\\sss.txt"'
     }
     stage('Clean Docker test'){
-       
-      //bat  'docker rmi react-test'
+       bat  'docker rmi react-test'
     }
     // stage('Deploy'){
     //   if(env.BRANCH_NAME == 'master'){
