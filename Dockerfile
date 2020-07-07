@@ -27,4 +27,4 @@ RUN npm install eslint -g
 CMD [ "sh", "lll.sh" ]
 
 # CMD echo aaaaaaaaaaa > /usr/src/test/marica.txt
-# CMD eslint .eslintrc.js -f checkstyle  > /usr/src/test/eslint.xml
+CMD eslint .eslintrc.js -f checkstyle  > /usr/src/test/eslint.xml
