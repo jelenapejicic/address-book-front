@@ -21,9 +21,9 @@ COPY .eslintrc.js /usr/src/app/
 
 RUN npm install
 RUN npm install eslint@6.6.0 -g
-CMD eslint .eslintrc.js -f checkstyle  > /usr/src/test/eslint.xml
 
 #RUN dos2unix lll.sh; chmod 755 lll.sh
 
 #CMD [ "sh", "lll.sh" ]
-CMD echo aaaaaaaaaaa > /usr/src/test/marica.txt
+#CMD echo aaaaaaaaaaa > /usr/src/test/marica.txt
+CMD eslint .eslintrc.js -f checkstyle  > /usr/src/test/eslint.xml
