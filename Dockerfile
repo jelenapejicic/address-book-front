@@ -19,9 +19,7 @@ COPY package.json /usr/src/app/
 COPY package-lock.json /usr/src/app/
 COPY .eslintrc.js /usr/src/app/
 
-ADD lll.sh /usr/src/test
-
-#RUN npm install
+RUN npm install
 #RUN npm install eslint@6.6.0 -g
 #CMD eslint -c .eslintrc.js -f checkstyle . --ext .js,.jsx -o /usr/src/test/eslint.xml
 
