@@ -20,7 +20,7 @@ COPY package-lock.json /usr/src/app/
 COPY .eslintrc.js /usr/src/app/
 
 RUN npm install
-RUN npm install eslint@6.6.0 -g
+#RUN npm install eslint
 
 #RUN dos2unix lll.sh; chmod 755 lll.sh
 
