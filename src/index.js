@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-
+ let zika = 'aaaa' 
 ReactDOM.render(
   <React.StrictMode>
     <App />

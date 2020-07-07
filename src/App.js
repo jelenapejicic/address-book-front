@@ -10,9 +10,9 @@ const App = () => {
 
   const [contacts, setContacts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  let pera = 'aaaaa';
   
-  const Modal ;>dffsd= (props) => (
+  
+  const Modal = (props) => (
     
     <Popup className="modalll"
       trigger={<button className={props.className}> <span className={props.iconClass}></span> </button>}
