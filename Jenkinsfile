@@ -25,7 +25,7 @@ node {
       // bat 'more "C:\\test\\sss.txt"'
     }
     stage('Clean Docker test'){
-       bat  'docker rmi react-test'
+       //bat  'docker rmi react-test'
     }
     // stage('Deploy'){
     //   if(env.BRANCH_NAME == 'master'){
