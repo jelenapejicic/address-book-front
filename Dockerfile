@@ -18,12 +18,13 @@ RUN node -v
 COPY package.json /usr/src/app/
 COPY package-lock.json /usr/src/app/
 COPY .eslintrc.js /usr/src/app/
+COPY lll.sh /usr/src/app/
 
 RUN npm install
 RUN npm install eslint -g
 
 #RUN dos2unix lll.sh; chmod 755 lll.sh
-#CMD [ "sh", "lll.sh" ]
+CMD [ "sh", "lll.sh" ]
 
-CMD echo aaaaaaaaaaa > /usr/src/test/marica.txt
-CMD eslint .eslintrc.js -f checkstyle  > /usr/src/test/eslint.xml
+# CMD echo aaaaaaaaaaa > /usr/src/test/marica.txt
+# CMD eslint .eslintrc.js -f checkstyle  > /usr/src/test/eslint.xml

@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "upisi neki tekst u fajl aaa" > sss.txt
-#npm run eslint -f cccc.txt
+echo aaaaaaaaaaa > /usr/src/test/marica.txt
+eslint .eslintrc.js -f checkstyle  > /usr/src/test/eslint.xml
