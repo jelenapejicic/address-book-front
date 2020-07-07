@@ -12,7 +12,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
   let pera = 'aaaaa';
   
-  const Modal = (props) => (
+  const Modal ;>dffsd= (props) => (
     
     <Popup className="modalll"
       trigger={<button className={props.className}> <span className={props.iconClass}></span> </button>}
