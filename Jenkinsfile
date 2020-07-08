@@ -36,7 +36,7 @@ node {
     // }
   }
   catch (err) {
-
+    
     bat 'more "C:\\test\\eslint.xml"'
     throw err
   }
