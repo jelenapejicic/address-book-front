@@ -20,9 +20,8 @@ node {
       // bat 'docker ps'
       // bat 'docker cp 7a461c42b6e7:/usr/src/app \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master\"'
       // bat 'docker run --name react-test --rm -v \"C:\\Program Files (x86)\\Jenkins\\workspace\\Job_Jelena_master":/usr/src/app react-test'
-      bat 'more "C:\\test\\eslint.xml"'
       bat 'docker run --name react-test --rm -v /c/test:/usr/src/test react-test'
-     
+      
     }
     stage('Clean Docker test'){
        //bat  'docker rmi react-test'
@@ -37,6 +36,8 @@ node {
     // }
   }
   catch (err) {
+
+    bat 'more "C:\\test\\eslint.xml"'
     throw err
   }
 }
